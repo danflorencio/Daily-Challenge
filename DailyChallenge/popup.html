@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Daily-Challenge</title>
+    <style>
+    <body>
+      <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+
+        <fieldset>
+          <h2>Json File</h2>
+          <input type='file' id='fileinput'>
+          <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+        </fieldset>
+      </form>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="myStyles.css">
+  </head>
+  <body bgcolor="#5cc7b2">
+    <script type="text/javascript" src="jquery.js"></script>
+    <h1>Today's Question</h1>
+  </body>
+</html>
