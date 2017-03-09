@@ -1,25 +1,26 @@
 h1 {
   text-align: center;
-  color: White;
-  font-family: Georgia, sans-serif;
+  color: Lime;
+  font-family:Courier;
 }
 h2 {
   /*white-space: nowrap;*/
   text-align: center;
-  color: White;
-  font-family: Georgia, serif;
+  margin-right: 20px;
+  color: Lime;
+  font-family:Courier;
 }
 
 p {
   text-align: center;
-  white-space: nowrap;
+  color: Green;
+  margin: 20px;
 }
 
 a {
   text-align: center;
   color: White;
-  font-family: "Courier New", Courier, "Lucinda Sans Typewriter",
-               "Lucinda Typewriter", monospace;
+  font-family:Courier;
   font-size: 250%;
   text-decoration: none;
 }
@@ -28,4 +29,14 @@ img {
   height: auto;
   margin-top: 5px;
   margin-bottom: 15px;
+}
+
+html {
+  height: auto;
+  width: 800px;
+}
+
+body {
+  height: auto;
+  width: 800px;
 }

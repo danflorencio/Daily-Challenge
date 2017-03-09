@@ -13,8 +13,6 @@ var p = "";
 window.onload = function() {
   // Debug
   console.log("window.onload");
-  // Check for the various File API support.
-
 }
 
 window.addEventListener ("load", readfileautomatically, false);
@@ -38,7 +36,7 @@ function readfileautomatically () {
   client.open('GET', '/links.txt');
   client.onreadystatechange = function()
   {
-    if( client.responseText != '' )
+    if(client.responseText != '')
     {
       var txt = client.responseText.split("\n");
       $.get(txt[0], function(data) {
