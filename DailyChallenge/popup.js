@@ -7,18 +7,43 @@
 var theNewScript = document.createElement("script");
 theNewScript.type = "text/javascript";
 theNewScript.src = "jquery.js";
+var p = "";
 
 window.onload = function() {
   // Debug
   console.log("window.onload");
   // Check for the various File API support.
-  if (window.File && window.FileReader && window.FileList && window.Blob) {
-    // Great success! All the File APIs are supported.
-    console.log('awesome');
-  } else {
-    console.log('The File APIs are not fully supported in this browser.');
+
+}
+
+window.addEventListener ("load", readfileautomatically, false);
+
+function get() {
+  p = document.getElementById('question');
+  var x;
+
+  x = new XMLHttpRequest();
+  x.onload = xhttpResponse;
+  x.open("GET", "links.txt", true);
+  x.send();
+}
+
+function xhttpResponse() {
+    p.innerHTML += this.responseText;
+}
+
+function readfileautomatically () {
+  var client = new XMLHttpRequest();
+  client.open('GET', '/links.txt');
+  client.onreadystatechange = function()
+  {
+    if( client.responseText != '' )
+    {
+      var txt = client.responseText.split("\n");
+      $.get(txt[0], function(data) {
+        document.getElementById("question").innerHTML = data.description;
+      })
+    }
   }
-  $.getJSON("working.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
-  });
+  client.send();
 }
