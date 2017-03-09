@@ -1,7 +1,8 @@
 /*
- * popup.js is executed when the popup.html is clicked on. The api used to
- * grab trending headlines and put them into a conveinient JSON format is
- * provided by newsapi.org, and the news outlet choice is The Washington Post.
+ * popup.js is executed when the popup.html is clicked on. This will work with
+ * previously scraped links using script.py and allHTML.txt in the above
+ * directory. All those links are then written to links.txt, and used to
+ * grab JSON data from Codewars.
  */
 
 var theNewScript = document.createElement("script");
