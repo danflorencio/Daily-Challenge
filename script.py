@@ -22,6 +22,7 @@ for u in urls:
 # Now, let's actually grab the JSON data and put it into a JSON file
 print len(links)
 
+"""
 for l in links:
   url = l
   response = urllib.urlopen(l)
@@ -29,3 +30,12 @@ for l in links:
   # write JSON data to file
   with open('working.json', 'a') as outfile:
     json.dump(data, outfile, indent = 0)
+"""
+
+# Because of Chrome's security policies which prevent loading a local JSON file,
+# we will instead write each of the links onto a line of a text file
+
+outFile = open("links.txt", 'w')
+for l in links:
+  print >>outFile, l
+outFile.close()
